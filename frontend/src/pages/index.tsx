@@ -9,28 +9,28 @@ const products = {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/orange.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+1',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/cherries.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+2',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/avocado.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+3',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/strawberry.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+4',
       itemsSold: 360,
     },
   ],
@@ -39,28 +39,28 @@ const products = {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/orange-vase.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+5',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/orange-stand.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+6',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/flower-vase.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+7',
       itemsSold: 360,
     },
     {
       title: 'Product title',
       price: 230,
       rating: 4,
-      imageUrl: '/images/coral.jpg',
+      imageUrl: 'https://placehold.co/600x600?text=Product+8',
       itemsSold: 360,
     },
   ],
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-md">
               <img
-                src="/images/logo.png"
+                src="https://placehold.co/100x32?text=Logo"
                 alt="Logo"
                 className="mx-auto mb-8 h-8"
               />
