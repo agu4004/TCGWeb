@@ -27,3 +27,7 @@ npm start
 ## Notes
 
 These projects are only skeletons because the environment lacks internet access. To scaffold full Next.js and Medusa projects, run the appropriate `npx create-next-app` and `npx create-medusa-app` commands in an environment with internet connectivity.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
