@@ -4,6 +4,11 @@ This repository contains minimal placeholder setups for the frontend and backend
 
 Both projects require an internet connection to install their dependencies.
 
+## Environment variables
+
+Copy `./.env.example` to `.env.local` and fill in values for your setup before
+starting the apps.
+
 ## Frontend
 
 The `frontend` folder contains a bare-bones Next.js 14 app. Install dependencies and run the dev server:
