@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mail, Phone, Loader2, CheckCircle, AlertCircle, Eye, EyeOff, Lock } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ShopFlowSignup() {
   const [activeTab, setActiveTab] = useState('email');
@@ -433,9 +434,9 @@ export default function ShopFlowSignup() {
           {/* Sign In Link */}
           <div className="text-center mt-8">
             <span className="text-gray-600">Have an account? </span>
-            <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+            <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
               Sign in
-            </button>
+            </Link>
           </div>
         </div>
 

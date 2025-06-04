@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const ShopFlowLogin = () => {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('email');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -131,7 +134,10 @@ const ShopFlowLogin = () => {
           </div>
 
           {/* Sign In Button */}
-          <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+          <button
+            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+            onClick={() => router.push('/')}
+          >
             <span>Sign In</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -142,9 +148,9 @@ const ShopFlowLogin = () => {
         {/* Sign Up Link */}
         <div className="mt-8 text-center">
           <span className="text-gray-600">Don't have an account? </span>
-          <button className="text-blue-600 hover:text-blue-800 font-medium">
+          <Link href="/signup" className="text-blue-600 hover:text-blue-800 font-medium">
             Sign up
-          </button>
+          </Link>
         </div>
       </div>
 
