@@ -31,7 +31,7 @@ const Hero = () => {
               {/* Main Cart Image */}
               <div className="absolute right-0 top-1/2 -translate-y-1/2">
                 <Image
-                  src="/images/shopping-cart.png"
+                  src="https://placehold.co/400x400?text=Cart"
                   alt="Shopping Cart"
                   width={400}
                   height={400}
@@ -42,7 +42,7 @@ const Hero = () => {
               {/* Floating Elements */}
               <div className="absolute left-10 top-10 rounded-full bg-teal-100 p-4">
                 <Image
-                  src="/images/avatar-placeholder.jpg"
+                  src="https://placehold.co/64x64?text=U"
                   alt="User Avatar"
                   width={64}
                   height={64}
