@@ -1,11 +1,49 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3001;
+const express = require("express")
+const { default: loaders, GracefulShutdownServer } = require("@medusajs/medusa")
 
-app.get('/', (req, res) => {
-  res.send('Placeholder backend running');
-});
+;(async () => {
+  async function start() {
+    const app = express()
+    const directory = process.cwd()
 
-app.listen(port, () => {
-  console.log(`Backend listening on port ${port}`);
-});
+    try {
+      const { container } = await loaders({
+        directory,
+        expressApp: app,
+        isTest: false,
+      })
+      const configModule = container.resolve("configModule")
+      const port = process.env.PORT || 9000
+
+      const server = GracefulShutdownServer.create(
+        app.listen(port, (err) => {
+          if (err) {
+            return
+          }
+          console.log(`Server is ready on port: ${port}!`)
+        })
+      )
+
+      // Handle graceful shutdown
+      const gracefulShutDown = () => {
+        server
+          .shutdown()
+          .then(() => {
+            console.log("Gracefully stopping the server.")
+            process.exit(0)
+          })
+          .catch((e) => {
+            console.error("Error received when shutting down the server.", e)
+            process.exit(1)
+          })
+      }
+      process.on("SIGTERM", gracefulShutDown)
+      process.on("SIGINT", gracefulShutDown)
+    } catch (err) {
+      console.error("Error starting server", err)
+      process.exit(1)
+    }
+  }
+
+  await start()
+})()
