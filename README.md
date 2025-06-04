@@ -16,7 +16,7 @@ npm run dev
 
 ## Backend
 
-The `backend` folder contains a placeholder Express server. Replace with MedusaJS when installing dependencies. To run:
+The `backend` folder contains a placeholder Express server. Replace with MedusaJS when installing dependencies. Backend configuration lives in `backend/medusa-config.js`. To run:
 
 ```bash
 cd backend
