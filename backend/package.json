@@ -13,7 +13,7 @@
     "build:server": "cross-env npm run clean && tsc -p tsconfig.json",
     "build:admin": "cross-env medusa-admin build",
     "watch": "cross-env tsc --watch",
-    "test": "cross-env jest",
+    "test": "jest",
     "seed": "cross-env medusa seed -f ./data/seed.json",
     "start": "cross-env npm run build && medusa start",
     "start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
@@ -31,6 +31,16 @@
     "@medusajs/notification-local": "^2.8.3",
     "@medusajs/notification-sendgrid": "^2.8.3",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "cross-env": "^5.2.1",
+    "rimraf": "^5.0.0"
+
   },
   "jest": {
     "globals": {
