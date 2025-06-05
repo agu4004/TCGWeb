@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+
 import { Heart, Search, Bell, User, Menu, ChevronDown, ChevronRight, Star, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
 
 const EcommerceHomepage = () => {

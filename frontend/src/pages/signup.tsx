@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 export default function ShopFlowSignup() {
   const router = useRouter();
+
   const [activeTab, setActiveTab] = useState('email');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -115,6 +116,7 @@ export default function ShopFlowSignup() {
       setSuccess(true);
       
       // Reset form and redirect after showing success
+
       setTimeout(() => {
         setSuccess(false);
         setEmail('');
@@ -122,6 +124,7 @@ export default function ShopFlowSignup() {
         setPassword('');
         setConfirmPassword('');
         router.push('/login');
+
       }, 2000);
       
     } catch (error) {
