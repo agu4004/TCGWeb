@@ -1,8 +1,8 @@
 node_modules/
-frontend/.next/
+apps/web/.next/
 .env
 
-backend/node_modules/
-backend/dist/
+apps/api/node_modules/
+apps/api/dist/
 *.env.local
 

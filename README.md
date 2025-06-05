@@ -1,6 +1,6 @@
 # TCGWeb
 
-This repository contains minimal placeholder setups for the frontend and backend projects.
+This repository contains placeholder setups for a web frontend and API backend.
 
 Both projects require an internet connection to install their dependencies.
 
@@ -9,25 +9,39 @@ Both projects require an internet connection to install their dependencies.
 Copy `./.env.example` to `.env.local` and fill in values for your setup before
 starting the apps.
 
-## Frontend
+## Getting Started
 
-The `frontend` folder contains a bare-bones Next.js 14 app. Install dependencies and run the dev server:
+Install all dependencies and start both the API and Web apps:
 
 ```bash
-cd frontend
-npm install
-npm run dev
+pnpm install
+pnpm -r dev
+```
+
+## Frontend
+
+The `apps/web` folder contains a bare-bones Next.js **15** app (the prompt mentions 14, but this template already uses version 15). Install dependencies and run the dev server:
+
+```bash
+cd apps/web
+pnpm install
+pnpm run dev
 ```
 
 ## Backend
 
-The `backend` folder contains a placeholder Express server. Replace with MedusaJS when installing dependencies. Backend configuration lives in `backend/medusa-config.js`. To run:
+The `apps/api` folder contains a minimal Express server. Replace with MedusaJS when installing dependencies. Backend configuration lives in `apps/api/medusa-config.js`. To run:
 
 ```bash
-cd backend
-npm install
-npm start
+cd apps/api
+pnpm install
+pnpm start
 ```
+
+Run `node seed.js` inside `apps/api` to generate a `seed.json` file with demo users and products.
+
+The server exposes a simple `GET /me` endpoint that returns a JSON object with a
+`role` field. This is intended for frontend login checks.
 
 ## Notes
 

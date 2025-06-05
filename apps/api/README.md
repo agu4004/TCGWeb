@@ -1,15 +1,16 @@
 # Backend
 
 This is a placeholder Express server. Replace with MedusaJS when installing dependencies.
+It includes minimal in-memory data and JWT authentication with a few sample endpoints.
 
 To install dependencies (requires internet):
 
 ```bash
-npm install
+pnpm install
 ```
 
 To start development server:
 
 ```bash
-npm start
+pnpm start
 ```

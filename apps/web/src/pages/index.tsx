@@ -1,12 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { isLoggedIn } from '../../lib/auth';
 
 import { Heart, Search, Bell, User, Menu, ChevronDown, ChevronRight, Star, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
 
 const EcommerceHomepage = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [likedProducts, setLikedProducts] = useState(new Set());
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    if (!isLoggedIn()) {
+      router.replace('/login');
+    } else {
+      fetch('http://localhost:9000/me')
+        .then(res => res.json())
+        .then(data => {
+          if (data.role === 'admin') {
+            router.replace('/admin');
+          } else {
+            router.replace('/dashboard');
+          }
+        })
+        .catch(() => router.replace('/login'));
+    }
+  }, [router]);
 
   const products = [
     {
