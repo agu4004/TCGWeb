@@ -257,8 +257,9 @@ Our mission is to empower men to embrace their unique style and feel confident i
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 px-6 py-3">
         <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <span>Made with</span>
-          <span className="text-blue-600 font-medium">Ysily</span>
+          <span>Made with</span
+          <span className="text-blue-600 font-medium">Visily</span>
+
         </div>
       </footer>
     </div>

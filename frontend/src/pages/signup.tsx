@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mail, Phone, Loader2, CheckCircle, AlertCircle, Eye, EyeOff, Lock } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function ShopFlowSignup() {
+  const router = useRouter();
+
   const [activeTab, setActiveTab] = useState('email');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -112,14 +115,16 @@ export default function ShopFlowSignup() {
       // Show success state
       setSuccess(true);
       
-      // Reset form after showing success
+      // Reset form and redirect after showing success
+
       setTimeout(() => {
         setSuccess(false);
         setEmail('');
         setPhone('');
         setPassword('');
         setConfirmPassword('');
-        // Here you might redirect to the next page or show a verification screen
+        router.push('/login');
+
       }, 2000);
       
     } catch (error) {

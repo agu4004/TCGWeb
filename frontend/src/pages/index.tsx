@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
+
 import { Heart, Search, Bell, User, Menu, ChevronDown, ChevronRight, Star, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
 
 const EcommerceHomepage = () => {
@@ -214,12 +216,12 @@ const EcommerceHomepage = () => {
               >
                 <Bell className="w-5 h-5" />
               </button>
-              <button 
+              <Link
+                href="/login"
                 className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                onClick={() => alert('User profile clicked!')}
               >
                 <User className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -258,12 +260,18 @@ const EcommerceHomepage = () => {
               >
                 Sale
               </button>
-              <button 
+              <button
                 className="border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors"
                 onClick={() => handleNavigation('Support')}
               >
                 Support
               </button>
+              <Link
+                href="/admin"
+                className="border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                Admin
+              </Link>
               <button className="flex items-center border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors">
                 <span>More</span>
                 <ChevronDown className="ml-1 w-4 h-4" />
