@@ -38,6 +38,8 @@ pnpm install
 pnpm start
 ```
 
+`pnpm start` assumes `NODE_ENV=production`.
+
 Run `node seed.js` inside `apps/api` to generate a `seed.json` file with demo users and products.
 
 The server exposes a simple `GET /me` endpoint that returns a JSON object with a

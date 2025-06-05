@@ -14,3 +14,5 @@ To start development server:
 ```bash
 pnpm start
 ```
+
+`pnpm start` assumes `NODE_ENV=production`.
