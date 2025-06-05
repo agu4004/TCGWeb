@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mail, Phone, Loader2, CheckCircle, AlertCircle, Eye, EyeOff, Lock } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function ShopFlowSignup() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('email');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -111,14 +114,14 @@ export default function ShopFlowSignup() {
       // Show success state
       setSuccess(true);
       
-      // Reset form after showing success
+      // Reset form and redirect after showing success
       setTimeout(() => {
         setSuccess(false);
         setEmail('');
         setPhone('');
         setPassword('');
         setConfirmPassword('');
-        // Here you might redirect to the next page or show a verification screen
+        router.push('/login');
       }, 2000);
       
     } catch (error) {
@@ -433,9 +436,9 @@ export default function ShopFlowSignup() {
           {/* Sign In Link */}
           <div className="text-center mt-8">
             <span className="text-gray-600">Have an account? </span>
-            <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+            <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
               Sign in
-            </button>
+            </Link>
           </div>
         </div>
 

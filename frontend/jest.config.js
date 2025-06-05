@@ -1,6 +1,6 @@
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
   roots: ['<rootDir>/src'],
   testMatch: ['**/?(*.)+(spec|test).tsx'],
   moduleNameMapper: {
